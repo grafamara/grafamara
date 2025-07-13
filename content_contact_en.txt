@@ -1,0 +1,38 @@
+# Contact Us - Grafamara: Your Partner Within Reach
+
+## Let's Discuss Your Projects
+
+We are delighted by your interest in Grafamara. Whether you have a question, a specific project to discuss, or wish to explore partnership opportunities, our team is here to listen. Fill out the form below, and we will get back to you as soon as possible. Your success is our priority, and we look forward to accompanying you on your digital journey.
+
+### Contact Form
+
+<form id="contactForm">
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="company">Company (optional):</label>
+    <input type="text" id="company" name="company">
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Your message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="submit-button">Send Message</button>
+  <p id="form-feedback"></p>
+</form>
+
+**SEO Keywords:** contact IT consulting, cybersecurity inquiry, business coaching contact, multimedia services quote.
