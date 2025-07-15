@@ -117,7 +117,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');
             if (languages[lang][key]) {
-                element.innerHTML = languages[lang][key];
+                if (key === 'contactEmail') {
+                    element.href = `mailto:${languages[lang][key]}`;
+                    element.innerHTML = languages[lang][key];
+                } else if (key === 'contactPhone') {
+                    element.href = `tel:${languages[lang][key]}`;
+                    element.innerHTML = languages[lang][key];
+                } else {
+                    element.innerHTML = languages[lang][key];
+                }
             }
         });
     }
