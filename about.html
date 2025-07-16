@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Grafamara</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Grafamara">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered: ', registration);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -37,20 +55,17 @@
     <main>
         <section id="about" class="content-section">
             <div class="container">
-                <h2>About Us</h2>
-                <h3>Our Commitment: Building Digital Bridges</h3>
-                <p>At <b>Grafamara</b>, we are more than an IT consulting firm — we are <b>architects of transformation</b>, <b>catalysts for growth</b>, and <b>builders of cross-continental connections</b>.</p>
-                <p>Founded in <b>Germany in 2017</b>, <b>Grafamara</b> has rapidly emerged as a trusted player in the consulting landscape, thanks to a sharp focus on <b>innovation</b>, <b>reliability</b>, and a solid grasp of <b>global market dynamics</b>. Our team of passionate experts turns complex technological challenges into strategic opportunities tailored to your vision and goals.</p>
-                <p>What sets us apart is our <b>unique positioning at the crossroads of Europe and Africa</b>. We are deeply convinced of the vast, untapped potential of the <b>Democratic Republic of Congo (DRC)</b> — a vibrant nation with a young, connected population and a strong appetite for digital innovation.</p>
-                <p><b>Grafamara</b> is committed to fostering <b>sustainable partnerships</b>, enabling <b>European businesses and institutions</b> to <b>explore and invest</b> in the emerging opportunities across the <b>DRC</b>. At the same time, we empower <b>Congolese enterprises and public institutions</b> to achieve <b>digital excellence</b> and align with <b>global best practices</b>.</p>
-                <p>In addition, we offer <b>personalized guidance</b> to all individuals and entrepreneurs who wish to <b>invest, collaborate, buy or sell with European companies</b>. Whether you are looking to establish a partnership, pursue academic opportunities, open a bank account, apply for a visa, or launch a business venture — <b>Grafamara</b> will be <b>by your side from day one</b>. We help you <b>navigate administrative processes</b> with clarity and ensure you make the right moves from the start.</p>
-                <p>Our work is grounded in <b>four core values</b>:<br>
-                 <b>Integrity</b> — Transparent advice rooted in trust and ethics<br>
-                 <b>Innovation</b> — Creative, future-proof, and user-centric solutions<br>
-                 <b>Excellence</b> — High standards in every project and every partnership<br>
-                 <b>Partnership</b> — Long-term collaborations that create real impact</p>
-                <p>By choosing <b>Grafamara</b>, you choose a partner who not only understands your technical needs, but who is also <b>deeply connected</b> to the <b>cultural, social, and economic realities</b> of the regions we serve.</p>
-                <p>Let us help you navigate the future with clarity, confidence, and success.</p>
+                <h2 data-lang="aboutTitle"></h2>
+                <h3 data-lang="aboutSubtitle"></h3>
+                <p data-lang="aboutParagraph1"></p>
+                <p data-lang="aboutParagraph2"></p>
+                <p data-lang="aboutParagraph3"></p>
+                <p data-lang="aboutParagraph4"></p>
+                <p data-lang="aboutParagraph5"></p>
+                <p data-lang="aboutParagraph6"></p>
+                <p data-lang="aboutParagraph7"></p>
+                <p data-lang="aboutParagraph8"></p>
+            </div>
             </div>
             </div>
         </section>

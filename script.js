@@ -110,10 +110,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const languageSelect = document.getElementById('language-select');
     languageSelect.addEventListener('change', (event) => {
         const selectedLanguage = event.target.value;
+        localStorage.setItem('selectedLanguage', selectedLanguage); // Save language preference
         updateContent(selectedLanguage);
     });
 
     function updateContent(lang) {
+        document.documentElement.lang = lang; // Set the lang attribute on the html tag
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');
             if (languages[lang][key]) {
@@ -130,8 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Set initial language
-    updateContent('en');
+    // Set initial language based on stored preference or default to German
+    const initialLanguage = localStorage.getItem('selectedLanguage') || 'de';
+    languageSelect.value = initialLanguage; // Set the dropdown to the stored language
+    updateContent(initialLanguage);
 
     // Dynamic Hero Background Image
     const heroBackground = document.querySelector('.hero-background');
