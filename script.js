@@ -1,5 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Language switching
+    const languageSelect = document.getElementById('language-select');
+
+    function updateContent(lang) {
+        document.documentElement.lang = lang; // Set the lang attribute on the html tag
+        document.querySelectorAll('[data-lang]').forEach(element => {
+            const key = element.getAttribute('data-lang');
+            if (languages[lang] && languages[lang][key]) {
+                if (key === 'contactEmail') {
+                    element.href = `mailto:${languages[lang][key]}`;
+                    element.innerHTML = languages[lang][key];
+                } else if (key === 'contactPhone') {
+                    element.href = `tel:${languages[lang][key]}`;
+                    element.innerHTML = languages[lang][key];
+                } else {
+                    element.innerHTML = languages[lang][key];
+                }
+            }
+        });
+    }
+
+    // Set initial language based on stored preference or default to German
+    const initialLanguage = localStorage.getItem('selectedLanguage') || 'de';
+    languageSelect.value = initialLanguage; // Set the dropdown to the stored language
+    updateContent(initialLanguage); // Apply initial language immediately
+
+    languageSelect.addEventListener('change', (event) => {
+        const selectedLanguage = event.target.value;
+        localStorage.setItem('selectedLanguage', selectedLanguage); // Save language preference
+        updateContent(selectedLanguage); // Apply new language
+    });
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.main-nav a, .cta-button');
 
@@ -77,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function validateEmail(email) {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const re = /^(([^<>()[\\]\\.,;:\s@"]+(\.[^<>()[\\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
 
@@ -105,37 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(section);
     });
-
-    // Language switching
-    const languageSelect = document.getElementById('language-select');
-    languageSelect.addEventListener('change', (event) => {
-        const selectedLanguage = event.target.value;
-        localStorage.setItem('selectedLanguage', selectedLanguage); // Save language preference
-        updateContent(selectedLanguage);
-    });
-
-    function updateContent(lang) {
-        document.documentElement.lang = lang; // Set the lang attribute on the html tag
-        document.querySelectorAll('[data-lang]').forEach(element => {
-            const key = element.getAttribute('data-lang');
-            if (languages[lang][key]) {
-                if (key === 'contactEmail') {
-                    element.href = `mailto:${languages[lang][key]}`;
-                    element.innerHTML = languages[lang][key];
-                } else if (key === 'contactPhone') {
-                    element.href = `tel:${languages[lang][key]}`;
-                    element.innerHTML = languages[lang][key];
-                } else {
-                    element.innerHTML = languages[lang][key];
-                }
-            }
-        });
-    }
-
-    // Set initial language based on stored preference or default to German
-    const initialLanguage = localStorage.getItem('selectedLanguage') || 'de';
-    languageSelect.value = initialLanguage; // Set the dropdown to the stored language
-    updateContent(initialLanguage);
 
     // Dynamic Hero Background Image
     const heroBackground = document.querySelector('.hero-background');

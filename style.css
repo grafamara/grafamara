@@ -118,7 +118,7 @@ body {
 .cta-button {
     background-color: var(--primary-color);
     color: var(--background-color);
-    padding: 15px 30px;
+    padding: 5px 10px; /* Adjusted size */
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
@@ -212,7 +212,7 @@ body {
 .submit-button {
     background-color: var(--primary-color);
     color: var(--background-color);
-    padding: 15px 30px;
+    padding: 5px 10px; /* Adjusted size */
     border: none;
     border-radius: 5px;
     font-weight: 600;

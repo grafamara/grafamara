@@ -76,7 +76,14 @@ const languages = {
         sam: "8Sam.ev",
         samText: "Pioneering the future of event management technology.",
         copyright: "&copy; 2025 Grafamara. All Rights Reserved.",
-        ourPartners: "Our Partners:"
+        ourPartners: "Our Partners:",
+        learnMore: "entdecke"
+    },
+    fr: {
+        learnMore: "entdecke"
+    },
+    de: {
+        learnMore: "entdecke"
     },
     fr: {
         home: "Accueil",
@@ -124,7 +131,7 @@ const languages = {
         coachingProgram4: "<strong>Coaching en Gestion du Changement :</strong> Accompagnement des organisations et des individus à travers les périodes de transition, assurant une adaptation en douceur et une mise en œuvre réussie des nouvelles stratégies.",
         coachingProgram5: "<strong>Ateliers d'Innovation et de Créativité :</strong> Favoriser une culture de l'innovation au sein de votre organisation, encourageant la résolution créative de problèmes et la pensée hors des sentiers battus.",
         whyChooseCoaching: "Pourquoi Choisir Grafamara Coaching ?",
-        whyChooseCoachingText: "Nos coachs certifiés apportent une richesse d'expérience et une compréhension approfondie du potentiel humain. Nous utilisons des méthodologies éprouvées et une approche personnalisée, garantissant que chaque programme est aligné sur vos objectifs uniques. Que vous soyez un leader en herbe, un cadre chevronné ou une équipe cherchant à améliorer ses performances, Grafamara Coaching est votre partenaire pour une transformation durable.",
+        whyChooseCoachingText: "Notre équipe d'experts certifiés en cybersécurité et en IA apporte une connaissance approfondie de l'industrie et une approche proactive de la défense numérique. Nous ne nous contentons pas d'identifier les problèmes ; nous fournissons des stratégies exploitables et un soutien pratique pour mettre en œuvre des solutions durables. Partenaires avec nous pour transformer vos vulnérabilités numériques en atouts stratégiques.",
         multimediaTitle: "Grafamara Multimedia",
         multimediaText: "Conseil pour les plateformes médiatiques modernes, y compris YouTube, les blogs et les podcasts, afin de développer la voix de votre marque.",
         multimediaExample: "<em>Exemple : Stratégie de croissance et de mise en place d'une chaîne YouTube.</em>",
