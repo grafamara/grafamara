@@ -1,0 +1,38 @@
+# Contactez-nous - Grafamara : Votre Partenaire à Portée de Main
+
+## Échangeons sur Vos Projets
+
+Nous sommes ravis de l'intérêt que vous portez à Grafamara. Que vous ayez une question, un projet spécifique à discuter, ou que vous souhaitiez explorer des opportunités de partenariat, notre équipe est à votre écoute. Remplissez le formulaire ci-dessous, et nous vous recontacterons dans les plus brefs délais. Votre succès est notre priorité, et nous sommes impatients de vous accompagner dans votre parcours numérique.
+
+### Formulaire de Contact
+
+<form id="contactForm">
+  <div class="form-group">
+    <label for="firstName">Prénom:</label>
+    <input type="text" id="firstName" name="firstName" required>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Nom:</label>
+    <input type="text" id="lastName" name="lastName" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="company">Entreprise (facultatif):</label>
+    <input type="text" id="company" name="company">
+  </div>
+  <div class="form-group">
+    <label for="subject">Sujet:</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Votre message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="submit-button">Envoyer le message</button>
+  <p id="form-feedback"></p>
+</form>
+
+**Mots-clés SEO :** contact IT consulting, cybersecurity inquiry, business coaching contact, multimedia services quote.

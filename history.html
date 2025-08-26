@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Grafamara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Grafamara">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered: ', registration);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">GRAFAMARA</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-lang="home">Home</a></li>
+                    <li><a href="about.html" data-lang="about">About Us</a></li>
+                    <li><a href="history.html" data-lang="history">History</a></li>
+                    <li><a href="services.html" data-lang="services">Services</a></li>
+                    <li><a href="partners.html" data-lang="partners">Partners</a></li>
+                    <li><a href="contact.html" data-lang="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en" selected>English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="history" class="content-section">
+            <div class="container">
+                <h2 data-lang="historyTitle">Our History</h2>
+                <h3 data-lang="historySubtitle">From 2017 to Today: Building the Digital Future</h3>
+                <p data-lang="historyText">The Grafamara adventure began in 2017 in Germany, driven by a clear vision: to demystify technology and make it accessible, secure, and profitable for everyone. What started as a passionate initiative quickly transformed into a recognized IT consulting firm, thanks to our unwavering commitment to excellence and innovation. From our early days, we focused on cybersecurity, anticipating the challenges of an increasingly connected world.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p data-lang="copyright">&copy; 2025 Grafamara. All Rights Reserved.</p>
+            <div class="partners">
+                <a href="partners.html"><span data-lang="ourPartners">Our Partners:</span></a>
+                <ul>
+                    <li>Kashandel</li>
+                    <li>ABSY TV</li>
+                    <li>8Sam.ev</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

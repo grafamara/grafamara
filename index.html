@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafamara - Professional Consulting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Grafamara">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered: ', registration);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body class="homepage-grayscale">
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">GRAFAMARA</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-lang="home">Home</a></li>
+                    <li><a href="about.html" data-lang="about">About Us</a></li>
+                    <li><a href="history.html" data-lang="history">History</a></li>
+                    <li><a href="services.html" data-lang="services">Services</a></li>
+                    <li><a href="partners.html" data-lang="partners">Partners</a></li>
+                    <li><a href="contact.html" data-lang="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en" selected>English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-background"></div>
+            <div class="container">
+                <h1 data-lang="heroTitle">Grafamara: Your Bridge to Digital Excellence</h1>
+                <p data-lang="heroSubtitle">Pioneering Solutions for a Connected World</p>
+                <a href="services.html" class="cta-button" data-lang="discoverServices">Discover Our Services</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2 data-lang="aboutTitle">About Us</h2>
+                <h3 data-lang="aboutSubtitle">Our Commitment: Building Digital Bridges</h3>
+                <p data-lang="vision">At Grafamara, we are more than just an IT consulting firm; we are architects of solutions, catalysts for growth, and facilitators of connections. Founded in Germany in 2017, our firm has quickly established itself as a key player, thanks to an approach focused on innovation, reliability, and a deep understanding of global markets. Our team is composed of passionate experts, dedicated to transforming technological challenges into strategic opportunities for our clients.</p>
+                <p data-lang="mission">Our unique value proposition lies in our ability to operate effectively at the intersection of European and African markets. We firmly believe in the immense potential of the Democratic Republic of Congo (DRC), a dynamic country with a young population and a thirst for innovation. Grafamara is committed to creating lasting synergies, helping European businesses and governments explore and invest in the flourishing opportunities in the DRC, while supporting Congolese entities towards digital excellence and access to the best international practices.</p>
+                <p data-lang="values">Our fundamental values – Integrity, Innovation, Excellence, and Partnership – guide each of our actions. We are committed to providing transparent advice, developing cutting-edge solutions, and maintaining the highest standards of quality. By choosing Grafamara, you opt for a partner who not only understands your technical needs but is also deeply rooted in the cultural and economic realities of the regions where we operate. We are here to help you navigate the future, with confidence and success.</p>
+            </div>
+        </section>
+
+        <section id="history" class="content-section">
+            <div class="container">
+                <h2 data-lang="historyTitle">Our History</h2>
+                <h3 data-lang="historySubtitle">From 2017 to Today: Building the Digital Future</h3>
+                <p data-lang="historyText">The Grafamara adventure began in 2017 in Germany, driven by a clear vision: to demystify technology and make it accessible, secure, and profitable for everyone. What started as a passionate initiative quickly transformed into a recognized IT consulting firm, thanks to our unwavering commitment to excellence and innovation. From our early days, we focused on cybersecurity, anticipating the challenges of an increasingly connected world.</p>
+            </div>
+        </section>
+
+        <section id="services" class="content-section">
+            <div class="container">
+                <h2 data-lang="servicesTitle">Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3 data-lang="advisoryTitle">Grafamara Advisory</h3>
+                        <p data-lang="advisoryText">Strategic guidance in Cybersecurity, AI, and Risk Management to protect and future-proof your business.</p>
+                        <p data-lang="advisoryExample"><em>Example: AI Integration Audit & Penetration Testing.</em></p>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-lang="coachingTitle">Grafamara Coaching</h3>
+                        <p data-lang="coachingText">Personal and professional development programs designed to unlock potential and drive success.</p>
+                        <p data-lang="coachingExample"><em>Example: Executive Coaching & Personal Growth Paths.</em></p>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-lang="multimediaTitle">Grafamara Multimedia</h3>
+                        <p data-lang="multimediaText">Consulting for modern media platforms, including YouTube, blogs, and podcasts, to build your brand's voice.</p>
+                        <p data-lang="multimediaExample"><em>Example: YouTube Channel Growth Strategy.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2 data-lang="contactTitle">Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="lastName" data-lang="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName" data-lang="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-lang="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-lang="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="\+?[0-9\s-]{7,}" title="Enter a valid phone number">
+                    </div>
+                    <button type="submit" class="submit-button" data-lang="sendMessage">Send Message</button>
+                    <p id="form-feedback"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p data-lang="copyright">&copy; 2025 Grafamara. All Rights Reserved.</p>
+            <div class="partners">
+                <a href="partners.html"><span data-lang="ourPartners">Our Partners:</span></a>
+                <ul>
+                    <li data-lang="kashandel">Kashandel</li>
+                    <li data-lang="absy">ABSY TV</li>
+                    <li data-lang="sam">8Sam.ev</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
